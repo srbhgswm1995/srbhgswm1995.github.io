@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
+		
+		<title>Publications</title>
+		
+		<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="Extra_css/carouselOnlyBootstrap.css" rel="stylesheet">
+		<link href="Extra_css/carouselImageDarken.css" rel="stylesheet">
+		<link href="Extra_css/dropbutton.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.min.css" rel="stylesheet">
+		<link href="Extra_css/overlayPages.css" rel="stylesheet">
+		<link href="Extra_css/snackbar.css" rel="stylesheet">
+		<link href="wheelnav/wheelnav.css" rel="stylesheet">
+		
+		
+	<script type="text/javascript">
+
+        window.onload = function () {
+
+            var wheel = new wheelnav("wheelDiv");
+
+            //This is the place for code snippets from the documentation -> http://wheelnavjs.softwaretailoring.net/documentation.html
+
+            wheel.createWheel(["Books", "Journals", "Conferences"]);
+            wheel.navigateWheel(2);
+
+            //Insert generated JavaScript code from here -> http://pmg.softwaretailoring.net
+
+        };
+
+    </script>
+
+		
+	</head>
+	<body>
+		
+		
+		<div id="wheelDiv"></div>
+
+
+		<div class="dropdown">
+ 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			Choose Year
+  			</button>
+	        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			<a class="dropdown-item" onclick="placePubData('2018')">2018</a>
+    		<a class="dropdown-item" onclick="placePubData('2017')">2017</a>
+			<a class="dropdown-item" onclick="placePubData('2016')">2016</a>
+			<a class="dropdown-item" onclick="placePubData('2015')">2015</a>
+			<a class="dropdown-item" onclick="placePubData('2014')">2014</a>
+			<a class="dropdown-item" onclick="placePubData('2013')">2013</a>
+			<a class="dropdown-item" onclick="placePubData('2012')">2012</a>
+			<a class="dropdown-item" onclick="placePubData('2011')">2011</a>
+			<a class="dropdown-item" onclick="placePubData('2010')">2010</a>
+			<a class="dropdown-item" onclick="placePubData('2009')">2009</a>
+			<a class="dropdown-item" onclick="placePubData('2008')">2008</a>
+			<a class="dropdown-item" onclick="placePubData('2007')">2007</a>
+			<a class="dropdown-item" onclick="placePubData('2006')">2006</a>
+			<a class="dropdown-item" onclick="placePubData('2005')">2005</a>
+			<a class="dropdown-item" onclick="placePubData('2004')">2004</a>
+			<a class="dropdown-item" onclick="placePubData('2003')">2003</a>
+			<a class="dropdown-item" onclick="placePubData('2002')">2002</a>
+			<a class="dropdown-item" onclick="placePubData('2001')">2001</a>
+			<a class="dropdown-item" onclick="placePubData('2000')">1995-2000</a>
+  			</div>
+		</div>
+		
+		<div id="pageContent">
+		
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" src="wheelnav/raphael.min.js"></script>
+    <script type="text/javascript" src="wheelnav/raphael.icons.min.js"></script>
+    <script type="text/javascript" src="wheelnav/wheelnav.min.js"></script>
+
+
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/js/mdb.min.js"></script>
+		<script type ="text/javascript" src="Extra_js/jquery_hovercarousel.js"></script>
+		<script type ="text/javascript" src="Extra_js/overlayjq.js"></script>	
+		<script type ="text/javascript" src="Extra_js/htmlInclusion.js"></script>
+		<script type ="text/javascript" src="Publication_sort/publicationShow.js"></script>
+	</body>
+</html>

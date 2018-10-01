@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Image Processing and Computer Vision Lab, IIT Madras</title>
+
+    <!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="Extra_css/carouselOnlyBootstrap.css" rel="stylesheet">
+	<link href="Extra_css/carouselImageDarken.css" rel="stylesheet">
+	<link href="Extra_css/dropbutton.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/css/mdb.min.css" rel="stylesheet">
+	<link href="Extra_css/overlayPages.css" rel="stylesheet">
+	<link href="Extra_css/snackbar.css" rel="stylesheet">
+	
+	
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+  </head>
+  
+  <body>
+	
+    <!-- Navigation -->
+	
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+		
+      <div class="container">
+        <a class="navbar-brand" href="#">Home</a>
+		<a class="navbar-brand" href="">Faculty</a>
+		<a class="navbar-brand" href="">Students</a>
+		<a class="navbar-brand" href="#">Research</a>
+		<a class="navbar-brand" href="">Publications</a>
+		<a class="navbar-brand" href="">News!</a>
+		<a class="navbar-brand" href="">Contact</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+	  <!--A little bar snackbar to show everytime an overlay is opened-->
+	  <div id="snackbar">Click outside the box to close.</div>
+	  
+	  <!--Overlays come here-->
+	  <div class="overlays" id="overlay1" onclick="off(1)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content1.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay2" onclick="off(2)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content2.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay3" onclick="off(3)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content3.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay4" onclick="off(4)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content4.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay5" onclick="off(5)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content5.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay6" onclick="off(6)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content6.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay7" onclick="off(7)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content7.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay8" onclick="off(8)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content8.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay9" onclick="off(9)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content9.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay10" onclick="off(10)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content10.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay11" onclick="off(11)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content11.html" height="100%" width="100%"></iframe></div>
+	  </div>
+	  <div class="overlays" id="overlay12" onclick="off(12)">
+  		<div id="overlayContent"><iframe src="ResearchSpecific/content12.html" height="100%" width="100%"></iframe></div>
+	  </div>
+
+	  <!--Overlays end here-->
+	  
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h3 class="masthead-heading mb-0">Research Areas</h3>
+          <a onclick="on(13)" class="btn btn-primary btn-xl rounded-pill mt-5">Click here to get a brief overview of all the areas we work in.</a>
+		  
+		  <div class="dropup">
+        	  <button class="dropbtn btn btn-secondary rounded-pill mt-5" type="button" data-toggle="dropdown">Or, select an area of your choice.
+  			  <span class="caret"></span></button>
+  			  <div class="dropup-content">
+    		  <a onclick="on(1)">Face recognition</a>
+			  <a onclick="on(2)">Change detection in rolling shutter affected and motion blurred images</a>
+			  <a onclick="on(3)">Dynamic scene segmentation using motion blur</a>
+			  <a onclick="on(4)">Underwater microscopic shape from focus</a>
+			  <a onclick="on(5)">Deskewing of underwater images</a>
+			  <a onclick="on(6)">Motion estimation in compressed imaging</a>
+			  <a onclick="on(7)">Depth from Motion Blur</a>
+			  <a onclick="on(8)">Image and Video Matting</a>
+			  <a onclick="on(9)">3D Geometry Inpainting</a>
+			  <a onclick="on(10)">Image Dehazing</a>
+			  <a onclick="on(11)">HDR using Handheld Camera</a>
+			  <a onclick="on(12)">Colour Based Tracking</a>
+    		  </div>
+		  </div>
+
+        </div>
+      </div>
+      <!--div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div-->
+    </header>
+
+	<div class="overlays" id="overlay13" onclick="off(13)">
+		<div id="overlayContentCarousel"><object type = "text/html" data="carousel.html" height="100%" width="100%"></object></div>
+		</div>
+
+	 <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+	<!-- Bootstrap core JavaScript -->
+    <!--script src="vendor/jquery/jquery.min.js"></script-->
+    <!--script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.9/js/mdb.min.js"></script>
+	<script type ="text/javascript" src="Extra_js/jquery_hovercarousel.js"></script>
+	<script type ="text/javascript" src="Extra_js/overlayjq.js"></script>	
+	<script type ="text/javascript" src="Extra_js/htmlInclusion.js"></script>	
+  </body>
