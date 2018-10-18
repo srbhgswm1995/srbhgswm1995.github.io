@@ -13,10 +13,8 @@
   
   <!--Custom stylesheets come between this-->
   <link rel="stylesheet" href="css_extras/stickyNav.css"/>
-  <link rel="stylesheet" href="css_extras/sticky-sidebar.css"/>
   <link rel="stylesheet" href="css_extras/collapsible.css"/>
   <link rel="stylesheet" href="css_extras/btnGroup.css"/>
-  <link rel="stylesheet" href="css_extras/spyLink.css"/>
   <!--and this.-->
   
  
@@ -76,22 +74,17 @@ p.round2 {
 
 li {line-height: 1.5;}
 
-#main-content	{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-	}
-
-
+@media screen and (max-width: 600px){
+	#myScrollspy {display:none;}
 }
+
   </style>
 
 
 </head>
 
 
-<body style="background-color:#f5f5f5;">
+<body style="background-color:#f5f5f5; height:100%">
 
 
 
@@ -157,39 +150,33 @@ li {line-height: 1.5;}
   
  
 <!--The content starts here-->
-<div class>
+<div class="content">
 	<section>
-	<div id="main-content" class="container-fluid main clearfix" style="width=100%;">
-		<div id="Areas" style="width: 30%; height: 590px; overflow: auto;" class="sidebar w3-sidebar w3-bar-block w3-card w3-animate-left clearfix">
-			<nav id="myScrollspy" class="sidebar__inner clearfix">
-				<button type="button" id="closeButton" class="w3-bar-item w3-button w3-large close" aria-Label="Close" onclick="w3_close()"><span aria-hidden="true">&times;</span></button>
-				<div class="sidebar-header">
-					<h3>Research Areas</h3>
-			        </div>
-				<ul class="nav nav-pills nav-stacked flex-column">
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area1">Face recognition</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area2">Change detection in rolling shutter affected and motion blurred images</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area3">Dynamic scene segmentation using motion blur</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area4">Underwater microscopic shape from focus</a><li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area5">Deskewing of underwater images</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area6">Motion estimation in compressed imaging</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area7">Depth from Motion Blur</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area8">Image and Video Matting</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area9">3D Geometry Inpainting</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area10">Image Dehazing</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area11">HDR using Handheld Camera</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area12">Colour Based Tracking</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area13">Aerial Imaging</a></li>
-					<li><a class="w3-bar-item w3-button nav-link" href="#Area14">Compressed Imaging</a></li>
+	<div class="container-fluid" class="child">
+	<div class="row">
+		
+		<div id="Areas" class="col-sm-3 col-md-6 col-lg-4">
+			<nav id="myScrollspy">
+				<ul style="white-space: pre-wrap;" class="nav nav-pills nav-stacked flex-column collapse">
+					<li class="nav-item"><a class="nav-link active" href="#Area1">Face recognition</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area2">Change detection in rolling shutter affected and motion blurred images</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area3">Dynamic scene segmentation using motion blur</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area4">Underwater microscopic shape from focus</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area5">Deskewing of underwater images</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area6">Motion estimation in compressed imaging</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area7">Depth from Motion Blur</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area8">Image and Video Matting</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area9">3D Geometry Inpainting</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area10">Image Dehazing</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area11">HDR using Handheld Camera</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area12">Colour Based Tracking</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area13">Aerial Imaging</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Area14">Compressed Imaging</a></li>
 				</ul>
 			</nav>
 		</div>
 		
-		<div id="Details" style="width: 70%"class="w3-container clearfix flex-item">
-			<div class="w3-teal">
-			  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-			</div>
-			<div style="height: 600px; overflow: auto;" data-spy="scroll" data-target="#myScrollspy"  data-offset="320" class= "content clearfix">
+		<div style="height: 500px; overflow: auto;" id="Details" class="col-sm-9 col-md-6 col-lg-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 			<div id="Area1" class="card"><div class="bg-info text-white card-header">Face Recognition</div>
 <div class="card-body"><p>
 Existing methods for performing face recognition in the presence of blur are based on the convolution model and cannot handle non-uniform blurring situations that frequently arise from tilts and rotations in hand-held cameras. We propose two methodologies for face recognition in the presence of space-varying motion blur comprising of arbitrarily-shaped kernels. The first approach for recognizing faces across blur, lighting and pose is based on the result that the set of all images obtained from a face image in a given pose by non-uniform blurring and changing the illumination forms a bi-convex set. Pose variations are accounted for by synthesizing from the frontal gallery a face image that matches the pose of the probe. The second technique leverages the alpha matte of pixels that straddle the boundary between the probe face and the background for blur estimation, and is capable of handling expression variations and partial occlusion as well. The probe is modeled as a linear combination of nine blurred illumination basis images in the synthesized nonfrontal pose, plus a sparse occlusion. We also advocate a recognition metric that capitalizes on the sparsity of the occluded pixels. The performance of both our methods is extensively validated on synthetic as well as real face data.
@@ -235,9 +222,9 @@ Motion blur in a photograph is caused by fast-moving objects as well as camera m
 			<div id="Area14" class="card"><div class="bg-info text-white card-header">Compressed Imaging</div>
 				<div class="card-body"><p>No content Availbale.</p></div>
 			</div>
-      			</div>
+      			
 		</div>
-		</div>
+	</div>
 	</div>
 	</section>
 </div>
@@ -260,25 +247,15 @@ Motion blur in a photograph is caused by fast-moving objects as well as camera m
                          <span><div class="float-right"><small> Copyright © IPCV Lab, IITM.</small></div></span>    
                     </ul>
                 </div>
-				         
+				
+                </div>          
         </div> 
  </footer>
 
   <!--Custom scripts come between this-->
   <script src="js_extras/stickyNav.js"></script>
-  <script type="text/javascript" src="js_extras/collapsible.js"></script>
-  <script src="sticky-navbar/sticky-sidebar.js"></script>
+  <script src="js_extras/collapsible.js"></script>
   <!--and this.-->
-
-  <script type="text/javascript">
-
-		var a = new StickySidebar('#Areas', {
-			topSpacing: 20,
-			bottomSpacing: 20,
-			containerSelector: '#main-content',
-			innerWrapperSelector: '.sidebar__inner'
-		});
-  </script>
  
 
 
