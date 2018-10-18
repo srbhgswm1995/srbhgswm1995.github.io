@@ -74,17 +74,14 @@ p.round2 {
 
 li {line-height: 1.5;}
 
-@media screen and (max-width: 600px){
-	#myScrollspy {display:none;}
 }
-
   </style>
 
 
 </head>
 
 
-<body style="background-color:#f5f5f5; height:100%">
+<body style="background-color:#f5f5f5;">
 
 
 
@@ -152,12 +149,15 @@ li {line-height: 1.5;}
 <!--The content starts here-->
 <div class="content">
 	<section>
-	<div class="container-fluid" class="child">
+	<div id="main-content" class="container-fluid main">
 	<div class="row">
 		
-		<div id="Areas" class="col-sm-3 col-md-6 col-lg-4">
-			<nav id="myScrollspy">
-				<ul style="white-space: pre-wrap;" class="nav nav-pills nav-stacked flex-column collapse">
+		<div id="Areas" class="wrapper sidebar col-sm-3 col-md-6 col-lg-4">
+			<nav id="myScrollspy" class="sidebar__inner">
+				<div class="sidebar-header">
+					<h3>Research Areas</h3>
+			        </div>
+				<ul style="white-space: pre-wrap;" class="nav nav-pills nav-stacked flex-column">
 					<li class="nav-item"><a class="nav-link active" href="#Area1">Face recognition</a></li>
 					<li class="nav-item"><a class="nav-link" href="#Area2">Change detection in rolling shutter affected and motion blurred images</a></li>
 					<li class="nav-item"><a class="nav-link" href="#Area3">Dynamic scene segmentation using motion blur</a></li>
@@ -177,6 +177,17 @@ li {line-height: 1.5;}
 		</div>
 		
 		<div style="height: 500px; overflow: auto;" id="Details" class="col-sm-9 col-md-6 col-lg-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+			<div class="flex-column">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		            <div class="container-fluid">
+
+		                <button type="button" id="sidebarCollapse" class="btn btn-info">
+		                    <i class="fas fa-align-left"></i>
+		                    <span>Toggle Sidebar</span>
+		                </button>
+		            </div>
+		        </nav>		
+
 			<div id="Area1" class="card"><div class="bg-info text-white card-header">Face Recognition</div>
 <div class="card-body"><p>
 Existing methods for performing face recognition in the presence of blur are based on the convolution model and cannot handle non-uniform blurring situations that frequently arise from tilts and rotations in hand-held cameras. We propose two methodologies for face recognition in the presence of space-varying motion blur comprising of arbitrarily-shaped kernels. The first approach for recognizing faces across blur, lighting and pose is based on the result that the set of all images obtained from a face image in a given pose by non-uniform blurring and changing the illumination forms a bi-convex set. Pose variations are accounted for by synthesizing from the frontal gallery a face image that matches the pose of the probe. The second technique leverages the alpha matte of pixels that straddle the boundary between the probe face and the background for blur estimation, and is capable of handling expression variations and partial occlusion as well. The probe is modeled as a linear combination of nine blurred illumination basis images in the synthesized nonfrontal pose, plus a sparse occlusion. We also advocate a recognition metric that capitalizes on the sparsity of the occluded pixels. The performance of both our methods is extensively validated on synthetic as well as real face data.
@@ -224,6 +235,7 @@ Motion blur in a photograph is caused by fast-moving objects as well as camera m
 			</div>
       			
 		</div>
+		</div>
 	</div>
 	</div>
 	</section>
@@ -255,7 +267,18 @@ Motion blur in a photograph is caused by fast-moving objects as well as camera m
   <!--Custom scripts come between this-->
   <script src="js_extras/stickyNav.js"></script>
   <script src="js_extras/collapsible.js"></script>
+  <script src="sticky-navbar/sticky-sidebar.js"></script>
   <!--and this.-->
+
+  <script type="text/javascript">
+
+		var a = new StickySidebar('#Areas', {
+			topSpacing: 20,
+			bottomSpacing: 20,
+			containerSelector: '#main-content',
+			innerWrapperSelector: '.sidebar__inner'
+		});
+  </script>
  
 
 
