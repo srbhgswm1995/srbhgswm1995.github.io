@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css_extras/collapsible.css"/>
   <link rel="stylesheet" href="css_extras/btnGroup.css"/>
   <link rel="stylesheet" href="css_extras/spyLink.css"/>
-  <link rel="stylesheet" href="css_extras/bootsnav.css"/>
+  <link rel="stylesheet" href="css_extras/mobSideNav.css"/>
   <!--and this.-->
   
  
@@ -186,18 +186,11 @@ li {line-height: 1.5;}
 					<li><a class="w3-bar-item w3-button nav-link" href="#Area13">Aerial Imaging</a></li>
 					<li><a class="w3-bar-item w3-button nav-link" href="#Area14">Compressed Imaging</a></li>
 				</ul>
-				</div></nav>
+				</div>
 				<!--600px up till here-->
-				<!--Navbar for mobile--><nav class="navbar navbar-default navbar-mobile bootsnav">
-	<div id="mobSideNav">
-		<div class="navbar-header">
-            		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                		<i class="fa fa-bars"></i>
-            		</button>
-            		<a class="navbar-brand" href="#brand"><img src="LOGO_ADDRESS" class="logo" alt=""></a>
-        	</div>
-		<div class="collapse navbar-collapse" id="navbar-menu">
-		<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+				<!--Navbar for mobile-->
+	<div id="mobSideNav" class="sidenav">
+		<ul class="nav nav-pills nav-stacked flex-column">
 					<li><a id="A1" href="#Area1">Face recognition</a></li>
 					<li><a id="A2" href="#Area2">Change detection in rolling shutter affected and motion blurred images</a></li>
 					<li><a id="A3" href="#Area3">Dynamic scene segmentation using motion blur</a></li>
@@ -212,7 +205,7 @@ li {line-height: 1.5;}
 					<li><a id="A12" href="#Area12">Colour Based Tracking</a></li>
 					<li><a id="A13" href="#Area13">Aerial Imaging</a></li>
 					<li><a id="A14" href="#Area14">Compressed Imaging</a></li>
-				</ul></div>
+				</ul>
 	</div>
 	<!--Navbar for mob ends here-->
 
@@ -302,7 +295,6 @@ Motion blur in a photograph is caused by fast-moving objects as well as camera m
   <script src="js_extras/stickyNav.js"></script>
   <script type="text/javascript" src="js_extras/collapsible.js"></script>
   <script src="sticky-navbar/sticky-sidebar.js"></script>
-  <script src="js_extra/bootsnav.js"></script>
   <!--and this.-->
 
   <script type="text/javascript">
