@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css_extras/collapsible.css"/>
   <link rel="stylesheet" href="css_extras/btnGroup.css"/>
   <link rel="stylesheet" href="css_extras/spyLink.css"/>
+  <link rel="stylesheet" href="css_extras/mobSideNav.css"/>
   <!--and this.-->
   
  
@@ -159,9 +160,12 @@ li {line-height: 1.5;}
 <!--The content starts here-->
 <div class>
 	<section>
+	
 	<div id="main-content" class="container-fluid main clearfix" style="width=100%;">
-		<div id="Areas" style="width: 30%; height: 590px; overflow: auto;" class="sidebar w3-sidebar w3-bar-block w3-card w3-animate-left clearfix">
+		<div id="Areas" class="sidebar w3-sidebar w3-bar-block w3-card w3-animate-left clearfix">
 			<nav id="myScrollspy" class="sidebar__inner clearfix">
+				<!--for screens > 600px-->
+				<div id="pcSideNav">
 				<button type="button" id="closeButton" class="w3-bar-item w3-button w3-large close" aria-Label="Close" onclick="w3_close()"><span aria-hidden="true">&times;</span></button>
 				<div class="sidebar-header">
 					<h3>Research Areas</h3>
@@ -182,6 +186,29 @@ li {line-height: 1.5;}
 					<li><a class="w3-bar-item w3-button nav-link" href="#Area13">Aerial Imaging</a></li>
 					<li><a class="w3-bar-item w3-button nav-link" href="#Area14">Compressed Imaging</a></li>
 				</ul>
+				</div>
+				<!--600px up till here-->
+				<!--Navbar for mobile-->
+	<div id="mobSideNav" class="sidenav">
+		<ul class="nav nav-pills nav-stacked flex-column">
+					<li><a id="A1" href="#Area1">Face recognition</a></li>
+					<li><a id="A2" href="#Area2">Change detection in rolling shutter affected and motion blurred images</a></li>
+					<li><a id="A3" href="#Area3">Dynamic scene segmentation using motion blur</a></li>
+					<li><a id="A4" href="#Area4">Underwater microscopic shape from focus</a><li>
+					<li><a id="A5" href="#Area5">Deskewing of underwater images</a></li>
+					<li><a id="A6" href="#Area6">Motion estimation in compressed imaging</a></li>
+					<li><a id="A7" href="#Area7">Depth from Motion Blur</a></li>
+					<li><a id="A8" href="#Area8">Image and Video Matting</a></li>
+					<li><a id="A9" href="#Area9">3D Geometry Inpainting</a></li>
+					<li><a id="A10" href="#Area10">Image Dehazing</a></li>
+					<li><a id="A11" href="#Area11">HDR using Handheld Camera</a></li>
+					<li><a id="A12" href="#Area12">Colour Based Tracking</a></li>
+					<li><a id="A13" href="#Area13">Aerial Imaging</a></li>
+					<li><a id="A14" href="#Area14">Compressed Imaging</a></li>
+				</ul>
+	</div>
+	<!--Navbar for mob ends here-->
+
 			</nav>
 		</div>
 		
