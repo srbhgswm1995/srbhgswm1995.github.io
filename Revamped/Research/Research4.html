@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <title>Image Processing and Computer Vision Lab, IITM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  
+  <!--Custom stylesheets come between this-->
+  <link rel="stylesheet" href="css_extras/stickyNav.css"/>
+  <link rel="stylesheet" href="css_extras/sticky-sidebar.css"/>
+  <link rel="stylesheet" href="css_extras/collapsible.css"/>
+  <link rel="stylesheet" href="css_extras/btnGroup.css"/>
+  <link rel="stylesheet" href="css_extras/spyLink.css"/>
+  <link rel="stylesheet" href="css_extras/mobSideNav.css"/>
+  <!--and this.-->
+  
+ 
+  <style>
+  
+.button {
+    background-color: #30415d; 
+    border: none;
+    color: white;
+    padding: 4px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 2px;
+    cursor: pointer;
+}  
+  
+/* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+	  } 
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.border-10{
+border-style:solid;
+ border-width: 10px;
+}
+
+.bg-company-red {
+    background-color: #30415d;
+}
+
+.ol {
+    width: 100%;
+    height: 96%;    
+    padding: 2%;
+    border: 2px solid #30415d;
+}
+
+p.round2 {
+    border: 2px solid #30415d;
+    border-radius: 8px;
+}
+
+.button3 {border-radius: 8px;}
+
+
+.btn {white-space: normal;}
+
+li {line-height: 1.5;}
+
+#main-content	{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+	}
+
+
+}
+  </style>
+
+
+</head>
+
+
+<body style="background-color:#f5f5f5;">
+
+
+
+<div class="jumbotron text-center" style=" margin-bottom:0; background-color:#031424;">
+<div class="float-sm-left"><img src="logo.png" alt="IITM Logo" class="rounded-circle" style="width:128px;height:128px;"></div>
+<div class="float-sm-right d-none d-lg-block"><img src="logo.png" alt="IITM Logo" class="rounded-circle" style="width:128px;height:128px;"></div>	
+  <h1 style="color:#ffffff;">Image Processing and Computer Vision Lab</h1>
+  <p style="color:#ffffff;">Department of Electrical Engineering, IIT Madras</p>
+</div>
+<!--Careful! It's a sticky Navbar!!-->
+<nav style="z-index:10000;" id="stickyNav" class="navbar navbar-dark bg-company-red navbar-expand-sm text-center justify-content-center" >
+   <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Faculty
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#"> Prof A N Rajagopalan</a>
+        <a class="dropdown-item" href="#">Prof Kaushik Mitra</a>
+        <a class="dropdown-item" href="#">Prof R Aravind</a>
+      </div>
+    </li>
+	
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Students
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Current Students</a>
+        <a class="dropdown-item" href="#">Alumni</a>
+      </div>
+    </li>
+	
+	<li class="nav-item">
+      <a class="active nav-link" href="#">Research</a>
+    </li>
+	
+	<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Publications
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Journals</a>
+        <a class="dropdown-item" href="#">Conferences</a>
+        <a class="dropdown-item" href="#">Books</a>
+      </div>
+    </li>
+	
+	<li class="nav-item">
+      <a class="nav-link" href="#">Contact</a>
+    </li>
+	
+  </ul>
+</nav>
+<!--Nav ends here. Sorry!-->
+<br>
+  
+ 
+<!--The content starts here-->
+<div class>
+	<section>
+	
+	<div id="main-content" class="container-fluid main clearfix" style="width=100%;">
+		<div id="Areas" class="sidebar w3-sidebar w3-bar-block w3-card w3-animate-left clearfix">
+			<nav id="myScrollspy" class="sidebar__inner clearfix">
+				<!--for screens > 600px-->
+				<div id="pcSideNav">
+				<button type="button" id="closeButton" class="w3-bar-item w3-button w3-large close" aria-Label="Close" onclick="w3_close()"><span aria-hidden="true">&times;</span></button>
+				<div class="sidebar-header">
+					<h3>Research Areas</h3>
+			        </div>
+				<ul class="nav nav-pills nav-stacked flex-column">
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area1">Face recognition</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area2">Change detection in rolling shutter affected and motion blurred images</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area3">Dynamic scene segmentation using motion blur</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area4">Underwater microscopic shape from focus</a><li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area5">Deskewing of underwater images</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area6">Motion estimation in compressed imaging</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area7">Depth from Motion Blur</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area8">Image and Video Matting</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area9">3D Geometry Inpainting</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area10">Image Dehazing</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area11">HDR using Handheld Camera</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area12">Colour Based Tracking</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area13">Aerial Imaging</a></li>
+					<li><a class="w3-bar-item w3-button nav-link" href="#Area14">Compressed Imaging</a></li>
+				</ul>
+				</div>
+				<!--600px up till here-->
+				<!--Navbar for mobile-->
+	<div id="mobSideNav" class="sidenav">
+		<ul class="nav nav-pills nav-stacked flex-column">
+					<li><a id="A1" href="#Area1">Face recognition</a></li>
+					<li><a id="A2" href="#Area2">Change detection in rolling shutter affected and motion blurred images</a></li>
+					<li><a id="A3" href="#Area3">Dynamic scene segmentation using motion blur</a></li>
+					<li><a id="A4" href="#Area4">Underwater microscopic shape from focus</a><li>
+					<li><a id="A5" href="#Area5">Deskewing of underwater images</a></li>
+					<li><a id="A6" href="#Area6">Motion estimation in compressed imaging</a></li>
+					<li><a id="A7" href="#Area7">Depth from Motion Blur</a></li>
+					<li><a id="A8" href="#Area8">Image and Video Matting</a></li>
+					<li><a id="A9" href="#Area9">3D Geometry Inpainting</a></li>
+					<li><a id="A10" href="#Area10">Image Dehazing</a></li>
+					<li><a id="A11" href="#Area11">HDR using Handheld Camera</a></li>
+					<li><a id="A12" href="#Area12">Colour Based Tracking</a></li>
+					<li><a id="A13" href="#Area13">Aerial Imaging</a></li>
+					<li><a id="A14" href="#Area14">Compressed Imaging</a></li>
+				</ul>
+	</div>
+	<!--Navbar for mob ends here-->
+
+			</nav>
+		</div>
+		
+		<div id="Details" style="width: 70%"class="w3-container clearfix flex-item">
+			<div class="w3-teal">
+			  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+			</div>
+			<div style="height: 600px; overflow: auto;" data-spy="scroll" data-target="#myScrollspy"  data-offset="320" class= "content clearfix">
+			<div id="Area1" class="card"><div class="bg-info text-white card-header">Face Recognition</div>
+<div class="card-body"><p>
+Existing methods for performing face recognition in the presence of blur are based on the convolution model and cannot handle non-uniform blurring situations that frequently arise from tilts and rotations in hand-held cameras. We propose two methodologies for face recognition in the presence of space-varying motion blur comprising of arbitrarily-shaped kernels. The first approach for recognizing faces across blur, lighting and pose is based on the result that the set of all images obtained from a face image in a given pose by non-uniform blurring and changing the illumination forms a bi-convex set. Pose variations are accounted for by synthesizing from the frontal gallery a face image that matches the pose of the probe. The second technique leverages the alpha matte of pixels that straddle the boundary between the probe face and the background for blur estimation, and is capable of handling expression variations and partial occlusion as well. The probe is modeled as a linear combination of nine blurred illumination basis images in the synthesized nonfrontal pose, plus a sparse occlusion. We also advocate a recognition metric that capitalizes on the sparsity of the occluded pixels. The performance of both our methods is extensively validated on synthetic as well as real face data.
+</p></div></div>
+			<div id="Area2" class="card"><div class="bg-info text-white card-header">Change detection in rolling shutter affected and motion blurred images</div>
+<div class="card-body"><p>The coalesced presence of motion blur and rolling shutter effect is unavoidable due to the sequential exposure of sensor rows in CMOS cameras. We address the problem of detecting changes in an image affected by motion blur and rolling shutter artifacts with respect to a reference image. Our framework bundles modelling of motion blur in global shutter and rolling shutter cameras into a single entity. We leverage the sparsity of the camera trajectory in the pose space and the sparsity of occlusion in spatial domain to propose an optimization problem that not only registers the reference image to the observed distorted image but detects occlusions as well, both within a single framework.</p></div></div>
+			<div id="Area3" class="card"><div class="bg-info text-white card-header">Dynamic scene segmentation using motion blur</div>
+<div class="card-body"><p>
+Motion blur in a photograph is caused by fast-moving objects as well as camera motion. In a 3D scene, a stationary object close to the camera can cause the same blurring effect as a fast-moving object relatively far from the camera. While motion blur is normally considered as a nuisance, we exploit motion blur as a cue to confirm the presence of moving objects. Given a single non-uniform motion blurred image of a dynamic scene, we make use of the mattes of the foreground objects to compute the relative non-uniform blur induced on the object. Using the estimated blur corresponding to the background and the foreground objects (possibly at different depths in the scene), we develop a method to automatically segment moving objects.
+</p></div></div>
+			<div id="Area4" class="card"><div class="bg-info text-white card-header">Underwater microscopic shape from focus</div>
+<div class="card-body"><p>We extend traditional Shape from focus (SFF) to the underwater scenario. Specifically, we show how 3D shape of objects immersed in water can be extracted from images captured under an optical microscope. Traditional SFF employs telecentric optics to achieve geometric registration among the frames. We extend conventional SFF to underwater objects under the assumption of negligible scattering. We establish that the property of telecentricity holds for objects immersed in water provided the numerical aperture is small. By modeling geometrical distortions due to refraction effects on the water surface, we prove that the depth map obtained in the presence of water is a scaled version of the original depth map. We also reveal that this scale factor is directly related to the refractive index of water. </p></div></div>
+			<div id="Area5" class="card"><div class="bg-info text-white card-header">Deskewing of underwater images</div>
+				<div class="card-body"><p>In this work, we address the problem of restoring a static planar scene degraded by skewing effect when imaged through a dynamic water surface. Specifically, we investigate geometric distortions due to unidirectional cyclic waves and circular ripples, phenomena that are most prevalent in fluid flow. Although the camera and scene are stationary, light rays emanating from a scene undergo refraction at the fluid-air interface. This refraction effect is time-varying for dynamic fluids and results in non-rigid distortions (skew) in the captured image. These distortions can be associated with motion blur depending on the exposure time of the camera. Firstly, we establish the condition under which the blur induced due to unidirectional cyclic waves can be treated as space-invariant. We then proceed to derive a mathematical model for blur formation and propose a restoration scheme by using a single degraded observation. In the second part, we reveal how the blur induced by circular ripples (though space-variant) can be modeled as uniform in the polar domain and develop a method for deskewing. </p></div>
+			</div>
+			<div id="Area6" class="card"><div class="bg-info text-white card-header">Motion estimation in compressed imaging</div>
+				<div class="card-body"><p>Recently the theory of compressed sensing has kindled new directions in the very act of image acquisition. This new mechanism of acquisition allows one to capture random projections of a scene directly instead of generating random features from the captured images. Sensor cost is a major concern when operating in non-visible wavelengths such as infrared and hyperspectral imaging. Compressed sensing comes to the rescue here as it involves only one sensor as opposed to an array of sensors. Temporal artifacts due to sequential acquisition of measurements manifest differently from a conventional optical camera. We propose a framework for dynamic scenes to estimate the relative global motion between camera and scene from measurements acquired using a compressed sensing camera. We follow an adaptive block approach where the resolution of the estimated motion path depends on the motion trajectory.</p></div>
+			</div>
+			<div id="Area7" class="card"><div class="bg-info text-white card-header">Depth from Motion Blur</div>
+				<div class="card-body"><p>From an unblurred-blurred image pair, we estimate 3D structure of a scene using the variation of motion blur as a depth cue. Non-uniform blur is modeled using a TSF and is suitably modified to accommodate parallax effects. TSF is estimated from locally derived blur kernels. We estimate the dense depth map of the scene within a MAP MRF framework.</p></div>
+			</div>
+			<div id="Area8" class="card"><div class="bg-info text-white card-header">Image and Video Matting</div>
+				<div class="card-body"><p><p align="justify">A new approach for image matting is proposed based on the Kalman filter, to extract the matte and original foreground, despite the presence of noise in the observed image. Different filter formulations with a discontinuity-adaptive Markov random field prior are proposed for handling additive white Gaussian noise and film-grain noise.</p>
+<p align="justify">We have also proposed a recursive video matting method with simultaneous noise reduction based on the Unscented Kalman filter (UKF). No assumptions are made about the type of motion of the camera or of the foreground object in the video. Moreover, user-specified  trimaps are required only once every ten frames. In order to accurately extract information at the borders between the foreground and the background, we include a prior that incorporates spatio-temporal information from the current and previous frame during estimation of the alpha matte as well as the foreground.</p>
+<p align="justify">Matting and super-resolution of frames from an image sequence have been studied independently in the literature. We propose a unified formulation to solve both inverse problems by assimilating matting within the super-resolution model. We adopt a multi-frame approach which uses data from adjacent frames to increase the resolution of the matte, foreground and background. This ill-posed problem is regularized by employing a Bayesian restoration approach, wherein the high-resolution image is modeled as a Markov Random Field. In matte super-resolution, it is particularly important to preserve fine details at the boundary pixels between the foreground and background. For this purpose, we use a discontinuity-adaptive smoothness prior to include observed data in the solution. This framework is useful in video editing applications for compositing low-resolution objects into high-resolution videos.</p></p></div>
+			</div>
+			<div id="Area9" class="card"><div class="bg-info text-white card-header">3D Geometry Inpainting</div>
+				<div class="card-body"><p><p align="justify">Generation of digital 3D models of real world structures is a popular theme in computer vision, graphics and virtual reality. In general, post-processing of the acquired or generated point clouds is warranted to generate ‘watertight’ 3D models. However, there may naturally exist structures that show large damaged or broken regions (e.g.: archaeological structures) due to numerous enviromental and man-made forces of degradation at work. Using traditional post processing methods, the ‘watertight’ 3D model generated will also contain such a damaged region, which may result in visually unpleasant outputs for applications such as a ‘Virtual Tour’. In this work, filling-up of such naturally existing damaged regions (or, holes) in 3D models is addressed.</p>
+<p align="justify">Once a salient geometric reconstruction of the holes in a broken 3D model has been achieved, an intensity filling-in (or, inpainting) for the reconstructed surface points is the next objective. This part of the work aims to perform inpainting of the per-colour channel brightness information over the 3D geometry itself for the hole-filled region which helps in making the inpainting process view independant. As a direct result of this, even the reconstructed surface points occluded in a given view can be intensity inpainted.</p></p></div>
+			</div>
+			<div id="Area10" class="card"><div class="bg-info text-white card-header">Image Dehazing</div>
+				<div class="card-body"><p>Bad weather like mist or fog leads to contrast degradation in the captured image. Here, the image formation model is given by the Radiative Transport Equation. The techniques to restore such image range from simple contrast restoration techniques to physics based models.They can also be divided into single image and multiple image techniques. These methods have gained particular attention in the Intelligent Transport Systems research community because of their importance in Driver Assistance Systems. In our research, we are studying the restoration of such images affected by bad weather.</p></div>
+			</div>
+			<div id="Area11" class="card"><div class="bg-info text-white card-header">HDR using Handheld Camera</div>
+				<div class="card-body"><p>Multiple exposures of a scene are used to estimate the high dynamic range irradiance of the scene. Images captured at higher exposures undergo non-uniform motion blur due to unavoidable handshake. Blur estimation and deblurring are done in the irradiance domain.</p></div>
+			</div>
+			<div id="Area12" class="card"><div class="bg-info text-white card-header">Colour Based Tracking</div>
+				<div class="card-body"><p>We have proposed a multiple person tracking algorithm under a static camera. Colour of clothing is modeled by Gaussians using tensor voting. Positional constraint along with the colour constraint is used for assigning pixels to a person. Similar approach is followed for object tracking even under a moving camera. The algorithm can handle partial and complete occlusions, illumination changes and object pose changes.</p></div>
+			</div>
+			<div id="Area13" class="card"><div class="bg-info text-white card-header">Aerial Imaging</div>
+				<div class="card-body"><p>No content Available.</p></div>
+			</div>
+			<div id="Area14" class="card"><div class="bg-info text-white card-header">Compressed Imaging</div>
+				<div class="card-body"><p>No content Availbale.</p></div>
+			</div>
+      			</div>
+		</div>
+		</div>
+	</div>
+	</section>
+</div>
+<!--The content ends here-->
+
+
+
+<footer>
+    <div class="container-fluid bg-company-red" style="color:#ffffff;">
+       <div class="row">
+       
+                <div class="col-sm-6 d-none d-lg-block">
+                    <ul>
+                         <span><small>For any suggestions about the website, mail ee18d405@smail.iitm.ac.in.</small></span>    
+                     </ul>
+                </div>
+                
+                <div class="col-sm-6">
+                    <ul class="contact">
+                         <span><div class="float-right"><small> Copyright © IPCV Lab, IITM.</small></div></span>    
+                    </ul>
+                </div>
+				         
+        </div> 
+ </footer>
+
+  <!--Custom scripts come between this-->
+  <script src="js_extras/stickyNav.js"></script>
+  <script type="text/javascript" src="js_extras/collapsible.js"></script>
+  <script src="sticky-navbar/sticky-sidebar.js"></script>
+  <!--and this.-->
+
+  <script type="text/javascript">
+
+		var a = new StickySidebar('#Areas', {
+			topSpacing: 20,
+			bottomSpacing: 20,
+			containerSelector: '#main-content',
+			innerWrapperSelector: '.sidebar__inner'
+		});
+  </script>
+ 
+
+
+</body>
+</html>

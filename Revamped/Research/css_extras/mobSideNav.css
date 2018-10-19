@@ -1,0 +1,87 @@
+/* Style the links inside the sidenav */
+#mobSideNav a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -170px; /* Position them outside of the screen */
+    transition: 0.5s; /* Add transition on hover */
+    padding: 5px; /* 15px padding */
+    width: 200px;
+    text-decoration: none; /* Remove underline */
+    font-size: 15px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mobSideNav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#A1 {
+    top: 20px;
+    background-color: #30415d;
+}
+
+#A2 {
+    top: 80px;
+    background-color: #30415d;
+}
+
+#A3 {
+    top: 140px;
+    background-color: #30415d;
+}
+
+#A4 {
+    top: 200px;
+    background-color: #30415d;
+}
+
+#A5 {
+    top: 260px;
+    background-color: #30415d;
+}
+
+#A6 {
+    top: 320px;
+    background-color: #30415d;
+}
+
+#A7 {
+    top: 380px;
+    background-color: #30415d;
+}
+
+#A8 {
+    top: 460px;
+    background-color: #30415d;
+}
+
+#A9 {
+    top: 520px;
+    background-color: #30415d;
+}
+
+#A10 {
+    top: 580px;
+    background-color: #30415d;
+}
+
+#A11 {
+    top: 640px;
+    background-color: #30415d;
+}
+
+#A12 {
+    top: 700px;
+    background-color: #30415d;
+}
+
+#A13 {
+    top: 760px;
+    background-color: #30415d;
+}
+
+#A14 {
+    top: 820px;
+    background-color: #30415d;
+}
