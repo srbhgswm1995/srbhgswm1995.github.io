@@ -1,87 +1,92 @@
-/* Style the links inside the sidenav */
-#mobSideNav a {
-    position: absolute; /* Position them relative to the browser window */
-    left: -170px; /* Position them outside of the screen */
-    transition: 0.5s; /* Add transition on hover */
-    padding: 5px; /* 15px padding */
-    width: 200px;
-    text-decoration: none; /* Remove underline */
-    font-size: 15px; /* Increase font size */
-    color: white; /* White text color */
-    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+#mobSideNav {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* top layer */
+    z-index: 20000;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-#mobSideNav a:hover {
-    left: 0; /* On mouse-over, make the elements appear as they should */
+#mobSideNav.active {
+    left: 0;
 }
 
-/* The about link: 20px from the top with a green background */
-#A1 {
-    top: 20px;
-    background-color: #30415d;
+#mobSideNav .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
 }
 
-#A2 {
-    top: 80px;
-    background-color: #30415d;
+#mobSideNav ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
 }
 
-#A3 {
-    top: 140px;
-    background-color: #30415d;
+#mobSideNav ul p {
+    color: #fff;
+    padding: 10px;
 }
 
-#A4 {
-    top: 200px;
-    background-color: #30415d;
+#mobSideNav ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
 }
 
-#A5 {
-    top: 260px;
-    background-color: #30415d;
+#mobSideNav ul li a:hover {
+    color: #7386D5;
+    background: #fff;
 }
 
-#A6 {
-    top: 320px;
-    background-color: #30415d;
+#mobSideNav ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
 }
 
-#A7 {
-    top: 380px;
-    background-color: #30415d;
+a[data-toggle="collapse"] {
+    position: relative;
 }
 
-#A8 {
-    top: 460px;
-    background-color: #30415d;
+
+.overlay {
+  display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+}
+/* display .overlay when it has the .active class */
+.overlay.active {
+    display: block;
+    opacity: 1;
 }
 
-#A9 {
-    top: 520px;
-    background-color: #30415d;
+#dismiss {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #7386D9;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-#A10 {
-    top: 580px;
-    background-color: #30415d;
-}
-
-#A11 {
-    top: 640px;
-    background-color: #30415d;
-}
-
-#A12 {
-    top: 700px;
-    background-color: #30415d;
-}
-
-#A13 {
-    top: 760px;
-    background-color: #30415d;
-}
-
-#A14 {
-    top: 820px;
-    background-color: #30415d;
-}
+#dismiss:hover {
+    background: #fff;
+    color: #7386D5;

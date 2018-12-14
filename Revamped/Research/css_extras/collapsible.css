@@ -1,12 +1,16 @@
 
 @media only screen and (min-width: 600px) {
-	#closeButton{
-		display: none;
-	}
-	#openNav{
-		display: none;
-	}
+
 	#mobSideNav{
+		display: none;
+	}
+	#Details{
+		width: 70%
+	}
+	#sidebarCollapse{
+		display: none;
+	}
+	#mobNav{
 		display: none;
 	}
 }
@@ -19,5 +23,8 @@
 	}
 	#Details{
 		width: 100%;
+	}
+	#stickyNav{
+		display: none;
 	}
 }
