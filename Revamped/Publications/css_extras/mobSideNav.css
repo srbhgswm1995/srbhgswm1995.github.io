@@ -1,0 +1,92 @@
+#mobSideNav {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* top layer */
+    z-index: 20000;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#mobSideNav.active {
+    left: 0;
+}
+
+#mobSideNav .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#mobSideNav ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#mobSideNav ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#mobSideNav ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#mobSideNav ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#mobSideNav ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+
+.overlay {
+  display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+}
+/* display .overlay when it has the .active class */
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#dismiss {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #7386D9;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #7386D5;

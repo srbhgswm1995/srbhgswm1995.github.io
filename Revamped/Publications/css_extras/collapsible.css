@@ -1,0 +1,30 @@
+
+@media only screen and (min-width: 600px) {
+
+	#mobSideNav{
+		display: none;
+	}
+	#Details{
+		width: 70%
+	}
+	#sidebarCollapse{
+		display: none;
+	}
+	#mobNav{
+		display: none;
+	}
+}
+@media only screen and (max-width: 600px) {
+	#openNav{
+		display: none;
+	}
+	#pcSideNav{
+		display: none;
+	}
+	#Details{
+		width: 100%;
+	}
+	#stickyNav{
+		display: none;
+	}
+}
